@@ -1,0 +1,244 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, abbr, img, strong, i, ol, ul, li, form, label, legend, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase; }
+
+.main {
+  max-width: 1024px;
+  box-sizing: border-box;
+  margin: 0 auto; }
+  .main__background {
+    position: fixed;
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -100; }
+
+.header {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 30px;
+  justify-content: center; }
+  .header__logo {
+    padding-right: 80px; }
+  .header__menu-link {
+    padding: 0 8px;
+    color: #566375; }
+  .header__autorisation {
+    text-transform: uppercase; }
+  .header__search-field {
+    display: none; }
+  .header__search-btn {
+    background-color: transparent;
+    height: 23px;
+    width: 23px;
+    background-image: url(img/lupa.png);
+    background-repeat: no-repeat;
+    margin: 0 16px;
+    border: none; }
+  .header__autorisation {
+    color: white; }
+
+.search {
+  display: flex;
+  justify-content: center;
+  color: white; }
+  .search__title {
+    font-size: 30px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    margin-top: 32px; }
+  .search__wrap {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px; }
+  .search__select {
+    display: flex;
+    justify-content: space-between; }
+  .search__city, .search__education {
+    min-width: 40%;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 16px;
+    border-radius: 30px;
+    cursor: pointer; }
+  .search__details {
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 16px;
+    border-radius: 30px;
+    cursor: pointer; }
+  .search__form {
+    margin: 16px auto; }
+  .search__btn {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 30px;
+    min-width: 140px;
+    color: white;
+    cursor: pointer; }
+
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #566375;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 30px; }
+  .filters__tips {
+    padding: 8px; }
+  .filters__tips-link {
+    color: #566375;
+    padding: 8px;
+    margin: 8px; }
+  .filters__tips-link_red {
+    color: #ff4e38; }
+  .filters__location-link {
+    color: #566375;
+    padding: 8px;
+    min-width: 100px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    margin: 8px; }
+  .filters__location-link_red {
+    color: #ff4e38; }
+  .filters__items {
+    display: flex;
+    align-items: center; }
+  .filters__filter {
+    padding: 8px; }
+  .filters__sprite {
+    background-image: url(img/filters__spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 8px; }
+  .filters__sprite-bus {
+    background-position: -20px -20px;
+    width: 18px;
+    height: 19px; }
+  .filters__sprite-girl {
+    background-position: -78px -20px;
+    width: 16px;
+    height: 19px; }
+  .filters__sprite-hat {
+    background-position: -134px -20px;
+    width: 29px;
+    height: 19px; }
+  .filters__sprite-home {
+    background-position: -203px -20px;
+    width: 24px;
+    height: 19px; }
+  .filters__sprite-melody {
+    background-position: -267px -20px;
+    width: 19px;
+    height: 19px; }
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #566375; }
+  .posts__post {
+    margin: 16px; }
+  .posts__wrap {
+    display: flex; }
+
+.post {
+  display: flex;
+  flex-direction: column;
+  max-width: 210px;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .post__icon-home {
+    width: 30px;
+    height: 26px;
+    background-image: url(img/home_m.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: -15px;
+    margin: 0 auto; }
+  .post__icon-melody {
+    width: 26px;
+    height: 26px;
+    background-image: url(img/melody_m.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: -15px;
+    margin: 0 auto; }
+  .post__icon-bus {
+    width: 26px;
+    height: 26px;
+    background-image: url(img/bus_m.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: -15px;
+    margin: 0 auto; }
+
+.post-wide {
+  max-width: 455px;
+  position: relative;
+  margin-bottom: 100px; }
+  .post-wide__picture {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: -30%; }
+  .post-wide__picture-man {
+    position: absolute;
+    z-index: 30;
+    left: -90px; }
+  .post-wide__comment {
+    position: absolute;
+    z-index: 20;
+    left: 80px; }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .header__menu-wrap {
+    display: none; }
+  .header__menu {
+    width: 50px;
+    height: 40px;
+    background-color: #ff4e38;
+    position: relative;
+    border-radius: 5px; }
+    .header__menu:hover .header__menu-wrap {
+      display: block;
+      top: 40px;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.5); }
+  .filters {
+    display: none; }
+  .posts {
+    justify-content: center; }
+  .posts__wrap {
+    width: 100%;
+    justify-content: space-between; }
+  .posts__post {
+    margin: 10px 0; }
+  .post-wide__picture {
+    display: none; }
+  .post-wide__picture-man {
+    display: none; }
+  .post-wide__comment {
+    position: static;
+    background-color: rgba(255, 255, 255, 0.5); } }

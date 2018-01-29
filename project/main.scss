@@ -1,0 +1,318 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, abbr, img, strong, i, ol, ul, li, form, label, legend, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+$white: rgb(255,255,255);
+$dark-grey: rgb(86, 99, 117);
+$grey: rgb(150, 166, 167);
+$red: rgb(255, 78, 56);
+$light-grey: rgb(226, 222, 224);
+
+$bgcolor-light: rgba(255,255,255,.5);
+$bgcolor-dark: rgba(0,0,0,.1);
+$main_fontcolor: $white;
+$fontcolor: $dark-grey;
+
+$radius: 30px;
+
+.link{
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.main{
+    max-width: 1024px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+    &__background{
+        position: fixed;
+        background-image: url(img/background.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        top:0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -100;
+    }
+}
+.header{
+    display: flex;
+    background-color: $bgcolor-dark;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: $radius;
+    justify-content: center;
+    
+    &__logo{
+        padding-right: 80px;
+
+    }
+    &__menu-link{
+        
+        padding: 0 8px;
+        color: $fontcolor;
+    }
+    &__autorisation{
+        text-transform: uppercase;
+    }
+    &__search-field{
+        display: none;
+    }
+    &__search-btn{
+        background-color: transparent;
+        height: 23px;
+        width: 23px;
+        background-image: url(img/lupa.png);
+        background-repeat: no-repeat;
+        margin: 0 16px;
+        border: none;
+    }
+    &__autorisation{
+        color: $main_fontcolor;
+    }    
+}
+.search{
+    display: flex;
+    justify-content: center;
+    color: $main_fontcolor;
+    
+    &__title{
+        font-size: 30px;
+        padding: 8px;
+        background-color: $bgcolor-dark;
+        border-radius: $radius;
+        margin-top: 32px;
+    }
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        min-width: 220px;
+    }
+    &__select{
+        display: flex;
+        
+        justify-content: space-between;
+    }
+    &__city, &__education{
+        min-width: 40%;
+        padding: 8px;
+        background-color: $bgcolor-dark;
+        margin-top: 16px;
+        border-radius: $radius;
+        cursor: pointer;
+    }
+    &__details{
+        padding: 8px;
+        background-color: $bgcolor-dark;
+        margin-top: 16px;
+        border-radius: $radius;
+        cursor: pointer;
+    }
+    &__form{
+        margin: 16px auto;
+    }
+    &__btn{
+        border: none;
+        background-color: $bgcolor-dark;
+        padding: 16px;
+        border-radius: $radius;
+        min-width: 140px;
+        color: $main_fontcolor;
+        cursor: pointer;
+    }
+}
+
+@mixin stitches-sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+    background-position: $x $y;
+    width: $width;
+    height: $height;
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $fontcolor;
+    background-color: $bgcolor-light;
+    border-radius: $radius;
+    &__tips{
+        padding: 8px;
+    }
+    &__tips-link {
+        color: $fontcolor;
+        padding: 8px;
+        margin: 8px;
+    }
+    &__tips-link_red{
+        color: $red;
+    }
+    &__location-link{
+        color: $fontcolor;
+        padding: 8px;
+        min-width: 100px;
+        border-radius: $radius;
+        border: 1px solid rgba(255,255,255,.6);
+        margin: 8px;
+    }
+    &__location-link_red{
+        color: $red;
+    }
+    &__items{
+        display: flex;
+        align-items: center;
+    }
+    
+    &__filter{
+        
+        padding: 8px;
+    }
+    &__sprite{
+        background-image: url(img/filters__spritesheet.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin: 8px;
+    }
+    &__sprite-bus{
+        @include stitches-sprite(-20px, -20px, 18px, 19px);
+    }
+    &__sprite-girl{
+        @include stitches-sprite(-78px, -20px, 16px, 19px);
+    }
+    &__sprite-hat{
+        @include stitches-sprite(-134px, -20px, 29px, 19px);
+    }
+    &__sprite-home{
+        @include stitches-sprite(-203px, -20px, 24px, 19px);
+    }
+    &__sprite-melody{
+        @include stitches-sprite(-267px, -20px, 19px, 19px);
+    }
+}
+
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $fontcolor;
+    
+    &__post{
+        margin: 16px;
+    }
+    
+    &__wrap {
+        display: flex;
+    }
+    
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    max-width: 210px;
+    background-color: $bgcolor-light;
+    &__icon-home{
+        width: 30px;
+        height: 26px;
+        background-image: url(img/home_m.png);
+        background-repeat: no-repeat;
+        position: relative;
+        top: -15px;
+        margin: 0 auto;
+    }
+    &__icon-melody{
+        width: 26px;
+        height: 26px;
+        background-image: url(img/melody_m.png);
+        background-repeat: no-repeat;
+        position: relative;
+        top: -15px;
+        margin: 0 auto;
+    }
+    &__icon-bus{
+        width: 26px;
+        height: 26px;
+        background-image: url(img/bus_m.png);
+        background-repeat: no-repeat;
+        position: relative;
+        top: -15px;
+        margin: 0 auto;
+    }
+}
+.post-wide{
+    max-width: 455px;
+    position: relative;
+    margin-bottom: 100px;
+    &__picture{
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: -30%;
+    }
+    &__picture-man{
+        position: absolute;
+        z-index: 30;
+        
+        left: -90px;
+    }
+    &__comment{
+        position: absolute;
+        z-index: 20;
+        left: 80px;
+    }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .header__menu-wrap{
+        display: none;
+    }
+    .header__menu{
+        width: 50px;
+        height: 40px;
+        background-color: $red;
+        position: relative;
+        border-radius: 5px;
+        
+        &:hover .header__menu-wrap{
+            display: block;
+            top: 40px;
+            position: absolute;
+            background-color: $bgcolor-light;   
+        }
+    }
+    .filters{
+        display: none;
+    }
+    .posts{
+        justify-content: center;
+    }
+    .posts__wrap{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .posts__post{
+        margin: 10px 0;
+    }
+    .post-wide__picture{
+        display: none;
+    }
+    .post-wide__picture-man{
+        display: none;
+    }
+    .post-wide__comment{
+        position: static;
+        background-color: $bgcolor-light;
+    }
+}
